@@ -25,6 +25,11 @@ export const HomeView = React.createClass({
 
 	render: function(){
 		console.log('data??', this.props.chirpsListOfData)
+    console.log(this.state.chirpList.length)
+if (this.state.chirpList.length < 1){
+  console.log("executing")
+return <p> loading </p>
+}
 		return (
 
 			<div className="container">

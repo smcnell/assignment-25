@@ -46,20 +46,17 @@ console.log("all the chirps", allTheChirps)
       if(this.props.chirpData === undefined){
         return <h1> </h1>
       }else{
-      return (
+        return (
 
+          <div>
+            <div className="oneChirp">
+            <h1 className="chirpUser"> User </h1>
+            <h2 className="chirpMessage">{this.props.chirpData.msg} </h2>
+            </div>
 
-   <div>
-     <div className="oneChirp">
-      <h1 className="chirpUser"> User </h1>
-      <h2 className="chirpMessage">{this.props.chirpData.msg} </h2>
-     </div>
-
-
-
-  </div>
-   )
- }
- }
+          </div>
+        )
+      }
+    }
 
 })
