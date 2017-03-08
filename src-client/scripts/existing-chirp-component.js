@@ -22,6 +22,7 @@ export const ExistingChirps = React.createClass({
 
   render: function(){
 let allTheChirps=this.props.chirpsListOfData
+
 console.log("all the chirps", allTheChirps)
     return (
     <div>
@@ -40,19 +41,25 @@ console.log("all the chirps", allTheChirps)
 
 
     render: function(){
-      console.log(this.props.chirpData)
+      console.log(this.props.chirpData, 'chirp data')
+      let component=this
+      if(this.props.chirpData === undefined){
+        return <h1> </h1>
+      }else{
       return (
+
 
    <div>
      <div className="oneChirp">
       <h1 className="chirpUser"> User </h1>
-      <h2 className="chirpMessage"> message</h2>
+      <h2 className="chirpMessage">{this.props.chirpData.msg} </h2>
      </div>
 
 
 
   </div>
    )
+ }
  }
 
 })

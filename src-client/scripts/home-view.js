@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavComponent} from './nav-component.js'
 import {NewChirpComponent} from "./new-chirp-component.js"
-import {ExistingChirps} from "./existing-chirp-component.js"
+import {ExistingChirps, EachChirp} from "./existing-chirp-component.js"
 import {STORE} from './store.js'
 import {ACTIONS} from './actions.js'
 

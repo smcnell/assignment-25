@@ -6,12 +6,18 @@ export const NewChirpComponent=React.createClass({
 
   _handleNewChirp: function(evt){
 		evt.preventDefault();
+    let formValsObj={}
     let formEl=evt.target;
-    console.log(formEl)
-    let formValsObj= {
+    if (formEl.inputMessageEl.value.length > 140){
+      alert("Chirp may not be longer than 140 characters")
+      msg: ""
+    } else {
+    formValsObj= {
       msg: formEl.inputMessageEl.value
     }
-    console.log(formValsObj)
+    formEl.inputMessageEl.value=""
+}
+    // console.log(formValsObj)
     ACTIONS.saveNewChirp(formValsObj)
     },
 
