@@ -10,6 +10,8 @@ const AppRouter = Backbone.Router.extend({
 	},
 
 	routes: {
+		'register':'showRegisterComponent',
+		'login': 'showLoginComponent',
 		'' : 'showHome'
 	},
 

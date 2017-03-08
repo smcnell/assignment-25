@@ -7,7 +7,7 @@ export const ACTIONS = {
 		let newChirpInstance = new ChirpModel()
 		newChirpInstance.set(userFormEntry)
 		newChirpInstance.save().then(function(serverRes){
-			console.log(serverRes)
+			// console.log(serverRes)
 			ACTIONS.fetchAllChirps()
 		})
 	},
@@ -16,7 +16,7 @@ export const ACTIONS = {
 
 		let chirpsCollInstance = new ChirpCollection()
 		chirpsCollInstance.fetch().then(function(serverRes){
-			STORE.setStore('shoutOutList', serverRes)
+			STORE.setStore('chirpList', serverRes)
 			console.log('new and old data', serverRes)
 		})
 	}

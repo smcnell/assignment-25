@@ -24,13 +24,13 @@ export const HomeView = React.createClass({
 
 
 	render: function(){
-		console.log('from <HomeView/>', this.props.shoutOutsListData)
+		console.log('data??', this.props.chirpsListOfData)
 		return (
 
 			<div className="container">
         <NavComponent/>
         <NewChirpComponent/>
-        <ExistingChirps chirpsListOfData={this.state.chirpsList}/>
+        <ExistingChirps chirpsListOfData={this.state.chirpList}/>
 
 			</div>
 		)
