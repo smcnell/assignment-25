@@ -14,5 +14,43 @@ img {
 h1{
 	text-align: center;
 	font-size: 10vw;
-	color: #2574A9;	
+	color: #2574A9;
+}
+
+.nav-container {
+	display: inline-block;
+}
+.logo-pic {
+	width: 30%;
+	display: inline-block;
+}
+
+.title {
+	width: 30%;
+	display: inline-block;
+}
+
+form {
+	text-align: center;
+}
+.chirpButton {
+	background-color: #2574A9;
+	color: #fff;
+}
+
+.oneChirp {
+	margin-top: 20px;
+	border: 2px solid #2574A9;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.oneChirp h1 {
+	font-size: 20px;
+	color: #62d1b3;
+}
+
+.oneChirp h2 {
+	font-size: 16px;
 }
