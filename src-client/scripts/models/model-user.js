@@ -1,6 +1,6 @@
 const UserModel = Backbone.Model.extend({
 	initialize: function(){
-		
+
 	},
 	urlRoot: '/api/users',
 	idAttribute: '_id'

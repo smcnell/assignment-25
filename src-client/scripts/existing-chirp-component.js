@@ -49,9 +49,9 @@ console.log("all the chirps", allTheChirps)
         return (
 
           <div>
-            <div className="oneChirp">
-            <h1 className="chirpUser"> User </h1>
-            <h2 className="chirpMessage">{this.props.chirpData.msg} </h2>
+            <div className="one-chirp">
+              <h1 className="chirp-user"> User </h1>
+              <h2 className="chirp-message">{this.props.chirpData.msg} </h2>
             </div>
 
           </div>

@@ -18,7 +18,7 @@ export const NewChirpComponent=React.createClass({
       return(
         <div className="modal-wrapper" onClick={this._removeModal}>
           <div className="modal">
-            <h1>ERROR</h1>
+            <h1>Sorry</h1>
             <p>Chirp may not be longer than 140 characters</p>
           </div>
         </div>
@@ -54,6 +54,7 @@ render: function(){
       {this._renderAlert()}
       <form onSubmit={this._handleNewChirp}>
         <textarea className="chirpInput" type="text" className="form-control" name="inputMessageEl"  />
+        <br/>
         <button className="chirpButton" type="submit">Chirp This</button>
       </form>
     </div>
