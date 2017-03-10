@@ -1,11 +1,22 @@
 import React from 'react'
+import {ACTIONS} from './actions.js'
+import {UserModel} from './models/model-user.js'
 
 export const WelcomeComponent=React.createClass({
 
   _handleSignup: function(evt){
 		evt.preventDefault();
+    console.log(evt.target);
+    let formEl = evt.target
+    let objToSave = {
+      username: formEl.userEl.value ,
+      password: formEl.passwordEl.value ,
+      imgURL: formEl.imgInputEl.value
+}
+ACTIONS.registerNewUser(objToSave)
 
     window.location.hash = "/home"
+
 	},
 
   _handleLogin: function(evt){
@@ -30,14 +41,14 @@ export const WelcomeComponent=React.createClass({
           <form onSubmit={this._handleSignup}>
           <div className="form-section">
             <h4>Username </h4>
-    		    <input type="text" className="form-control" name="theMsgEl"/>
+    		    <input type="text" className="form-control" name="userEl"/>
           </div>
 
           <div className="form-section">
     	      <h4>Password </h4>
-    	      <input type="text" className="form-control" name="msgFromEl"/>
+    	      <input type="text" className="form-control" name="passwordEl"/>
           </div>
-    	      
+
 
           <div className="form-section">
     	      <h4>Your face</h4>

@@ -1,6 +1,8 @@
 import React from 'react'
 import Backbone from 'backbone'
 import {ACTIONS} from './actions.js'
+import {WelcomeComponent} from './welcome-component.js'
+
 
 export const NewChirpComponent=React.createClass({
 

@@ -1,6 +1,7 @@
 import Backbone from 'backbone';
 import {ChirpModel, ChirpCollection} from './models/model-chirps.js'
 import {STORE} from './store'
+import {UserModel} from './models/model-user.js'
 
 export const ACTIONS = {
 	saveNewChirp: function(userFormEntry){
@@ -25,4 +26,18 @@ export const ACTIONS = {
 	STORE.setStore('currentNavRoute', selectedAppRoute)
 	window.location.hash = urlRoute
 },
+
+registerNewUser: function(newUserInfoObj){
+	UserModel.register(newUserInfoObj).then(function(serverRes){
+		ACTIONS.changeCurrentNav('SHOUTS', 'shouts')
+	})
+},
+
+loginUser: function(usr, pw){
+	UserModel.logIn(usr, pw).then(function(serverRes){
+		// console.log('authenticated user!!!', serverRes)
+		STORE.setStore('currentUser', serverRes )
+		ACTIONS.changeCurrentNav('SHOUTS', 'shouts')
+	})
+}
 }

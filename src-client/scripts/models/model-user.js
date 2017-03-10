@@ -1,4 +1,6 @@
-const UserModel = Backbone.Model.extend({
+import $ from 'jquery'
+
+export const UserModel = Backbone.Model.extend({
 	initialize: function(){
 
 	},
@@ -25,7 +27,7 @@ UserModel.register =  function(data){
 
 	return $.ajax({
 		method: 'POST',
-		data: JSON.stringify({ username: username, password: pw}),
+		data: JSON.stringify(data),
 		headers: {
 			'Content-Type': 'application/json'
 		},
