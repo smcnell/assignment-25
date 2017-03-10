@@ -19,5 +19,10 @@ export const ACTIONS = {
 			STORE.setStore('chirpList', serverRes)
 			console.log('new and old data', serverRes)
 		})
-	}
+	},
+
+	changeCurrentNav: function(selectedAppRoute, urlRoute){
+	STORE.setStore('currentNavRoute', selectedAppRoute)
+	window.location.hash = urlRoute
+},
 }

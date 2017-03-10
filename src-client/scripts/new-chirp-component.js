@@ -56,6 +56,7 @@ render: function(){
         <textarea className="chirpInput" type="text" className="form-control" name="inputMessageEl"  />
         <br/>
         <button className="chirpButton" type="submit">Chirp This</button>
+
       </form>
     </div>
   )

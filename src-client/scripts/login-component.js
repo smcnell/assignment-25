@@ -22,12 +22,13 @@ export const LoginComponent=React.createClass({
             <h4>Username </h4>
     		    <input type="text" className="form-control" name="theMsgEl"/>
           </div>
-    	      <hr/>
+
+
           <div className="form-section">
     	      <h4>Password </h4>
     	      <input type="text" className="form-control" name="msgFromEl"/>
           </div>
-    	      <hr/>
+    	      
 
 
 
